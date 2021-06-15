@@ -143,8 +143,7 @@ components:
 security:
   - {}
   - petstore_oauth2:
-    - read:pets
-    - read:pet
-    - delete:pet
-    - post:pet
-  
+      - 'read:pets'
+      - 'read:pet'
+      - 'delete:pet'
+      - 'post:pet'
