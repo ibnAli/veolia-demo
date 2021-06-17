@@ -5,7 +5,7 @@ info:
   license:
     name: MIT
 servers:
-  - url: 'http://petstore.swagger.io/v1'
+  - url: 'http://org-env.apigee.net/demo/v1'
 paths:
   /pets:
     get:
@@ -135,15 +135,15 @@ components:
       flows:
         clientCredentials:
           tokenUrl: 'https://org-env.apigee.net/demo/v1/token'
-          scopres:
-            'read:pets': get all pets
-            'read:pet': get a specific pet
-            'delete:pet': delete a specific pet
-            'post:pet': create a pet
+          scopes:
+            read:pets: get all pets
+            read:pet: get a specific pet
+            delete:pet: delete a specific pet
+            post:pet: create a pet
 security:
   - {}
   - petstore_oauth2:
-      - 'read:pets'
-      - 'read:pet'
-      - 'delete:pet'
-      - 'post:pet'
+      - read:pets
+      - read:pet
+      - delete:pet
+      - post:pet
